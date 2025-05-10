@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jemputan Majlis Pertunangan</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: url('https://i.ibb.co/ZVh01dm/bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: caramel chocolate;
-      text-align: center;
-      padding: 50px;
-    }
-    .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kad Jemputan Digital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        .invitation {
+            margin-top: 100px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://youtu.be/o25_Tn8BnFM?si=_dQFtms1GEurCCQG.mp3" type="audio/mp3">
-  </audio>
-
-  <div class="container">
-    <h1> Majlis Pertunangan</h1>
-    <h2>Kamal Hamizi & Siti Norasyikin</h2>
-    <p>Date: Ahad, 14 September 2025</p>
-    <p>Venue: Lot 245, Jalan Kejora 2D/1,Kampung Melayu Tambahan,
-               Rasa, 44200 Hulu Selangor,
-               Selangor</p>
-    <p><a href="https://www.waze.com/en-GB/live-map/directions?to=ll.3.515131%2C101.634457;">Lihat Lokasi</a></p>
-    <p><a href="https://wa.me/60198462073" style="color: #42f57e;">RSVP di WhatsApp</a></p>
-  </div>
+    <div class="invitation">
+        <h1>Jemputan Pertunangan</h1>
+        <p>Dengan sukacitanya kami menjemput anda ke majlis pertunangan kami.</p>
+        <button onclick="showDetails()">Tunggu Apa Lagi? Klik Di Sini!</button>
+        <div id="details" style="display: none;">
+            <p>Tarikh: 25 Mei 2025</p>
+            <p>Tempat: Restoran XYZ</p>
+        </div>
+    </div>
+    <script>
+        function showDetails() {
+            const details = document.getElementById("details");
+            details.style.display = details.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
